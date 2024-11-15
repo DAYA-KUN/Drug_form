@@ -28,7 +28,7 @@ function DrugForm() {
       });
       alert("Drug data submitted successfully");
       navigate("/drug-table");
-      // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       alert("Failed to submit drug data");
     }
@@ -50,7 +50,7 @@ function DrugForm() {
             value={drugData.drug_name}
             onChange={handleChange}
             placeholder="Drug Name"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -59,7 +59,7 @@ function DrugForm() {
             value={drugData.active_ingredient}
             onChange={handleChange}
             placeholder="Active Ingredient"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -68,7 +68,7 @@ function DrugForm() {
             value={drugData.strength}
             onChange={handleChange}
             placeholder="Strength"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -77,7 +77,7 @@ function DrugForm() {
             value={drugData.dosage_form_route}
             onChange={handleChange}
             placeholder="Dosage Form/Route"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -86,7 +86,7 @@ function DrugForm() {
             value={drugData.marketing_status}
             onChange={handleChange}
             placeholder="Marketing Status"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -95,7 +95,7 @@ function DrugForm() {
             value={drugData.te_code}
             onChange={handleChange}
             placeholder="TE Code"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -104,7 +104,7 @@ function DrugForm() {
             value={drugData.rld}
             onChange={handleChange}
             placeholder="RLD"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
           <input
@@ -113,7 +113,7 @@ function DrugForm() {
             value={drugData.rs}
             onChange={handleChange}
             placeholder="RS"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300 focus:outline-none text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:outline-none text-gray-700"
             required
           />
         </div>
