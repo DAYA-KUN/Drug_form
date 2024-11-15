@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -15,7 +16,7 @@ function CsvUploader() {
         reader.onload = (event) => {
             const text = event.target.result;
             const lines = text.split('\n');
-            const result = lines.map((line, index) => {
+            const result = lines.map((line) => {
                 const [drug_name, active_ingredient, strength, dosage_form_route, marketing_status, te_code, rld, rs] = line.split(',');
                 return { drug_name, active_ingredient, strength, dosage_form_route, marketing_status, te_code, rld, rs };
             }).filter((item) => item.drug_name); // Avoid empty lines
