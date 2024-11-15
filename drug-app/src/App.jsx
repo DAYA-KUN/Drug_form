@@ -1,11 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
-import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import DrugForm from './components/DrugForm';
-import CsvUploader from './components/CsvUploader';
-import { checkAuth } from './utils/auth';
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  Link,
+} from "react-router-dom";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import DrugForm from "./components/DrugForm";
+import CsvUploader from "./components/CsvUploader";
+import { checkAuth } from "./utils/auth";
+import DrugTable from "./components/DrugTable";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,7 +26,7 @@ function App() {
 
   // This will handle logout and set authentication to false
   const handleLogout = () => {
-    Cookies.remove('token'); // Removes token cookie on logout
+    Cookies.remove("token"); // Removes token cookie on logout
     setIsAuthenticated(false);
   };
 
@@ -28,7 +36,9 @@ function App() {
         {/* Navbar */}
         <nav className="w-full bg-white shadow-md">
           <div className="container mx-auto flex justify-between items-center p-4">
-            <h2 className="text-xl font-semibold text-gray-800">Drug Data Management</h2>
+            <h2 className="text-xl font-semibold text-gray-800">
+              Drug Data Management
+            </h2>
             <div className="space-x-6">
               <Link
                 to="/"
@@ -74,6 +84,14 @@ function App() {
                   </Link>
                 </>
               )}
+              {isAuthenticated && (
+                <Link
+                  to="/drug-table"
+                  className="text-lg text-gray-800 hover:text-blue-600 transition-all duration-300"
+                >
+                  View Drugs
+                </Link>
+              )}
             </div>
           </div>
         </nav>
@@ -83,15 +101,21 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={isAuthenticated ? <DrugForm /> : <Navigate to="/login" />}
+              element={
+                isAuthenticated ? <DrugForm /> : <Navigate to="/login" />
+              }
             />
             <Route
               path="/upload"
-              element={isAuthenticated ? <DrugForm /> : <Navigate to="/login" />}
+              element={
+                isAuthenticated ? <DrugForm /> : <Navigate to="/login" />
+              }
             />
             <Route
               path="/bulk-upload"
-              element={isAuthenticated ? <CsvUploader /> : <Navigate to="/login" />}
+              element={
+                isAuthenticated ? <CsvUploader /> : <Navigate to="/login" />
+              }
             />
             <Route
               path="/signup"
@@ -100,6 +124,12 @@ function App() {
             <Route
               path="/login"
               element={!isAuthenticated ? <Login /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/drug-table"
+              element={
+                isAuthenticated ? <DrugTable /> : <Navigate to="/login" />
+              }
             />
           </Routes>
         </div>
