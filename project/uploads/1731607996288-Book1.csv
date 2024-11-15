@@ -1,0 +1,4 @@
+drug_name,active_ingredient,strength,dosage_form_route,marketing_status,te_code,rld,rs
+Aspirin,Acetylsalicylic Acid,500,Tablet/Oral,Approved,AA,Yes,No
+Ibuprofen,Ibuprofen,200,Tablet/Oral,Approved,AB,No,Yes
+Amoxicillin,Amoxicillin,250,Capsule/Oral,Approved,AC,Yes,Yes
